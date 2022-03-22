@@ -15,7 +15,7 @@ class Fleet:
 
 
 
-robot_fleet = Fleet()
-robot_fleet.create_fleet()
+# robot_fleet = Fleet()
+# robot_fleet.create_fleet()
 # print(robot_fleet.robots)
 
