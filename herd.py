@@ -5,9 +5,18 @@ class Herd:
         self.dinosaurs = []
 
     def create_herd(self):
-        return self.dinosaurs.append(chompy.name)
+        chompy = Dinosaur("chompy", 30)
+        speedy = Dinosaur("speedy", 10)
+        slashy = Dinosaur("slashy", 20)
+         
+        self.dinosaurs.append(chompy)
+        self.dinosaurs.append(speedy)
+        self.dinosaurs.append(slashy)
+       
+
+team_dino = Herd()
+team_dino.create_herd()
+print(team_dino.dinosaurs)
 
 
-chompy = Dinosaur("chompy", 30)
 
-create_herd()
