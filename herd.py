@@ -14,9 +14,9 @@ class Herd:
         self.dinosaurs.append(slashy)
        
 
-team_dino = Herd()
-team_dino.create_herd()
-print(team_dino.dinosaurs)
+# team_dino = Herd()
+# team_dino.create_herd()
+# print(team_dino.dinosaurs)
 
 
 
