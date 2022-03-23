@@ -1,44 +1,51 @@
 from fleet import Fleet
 from herd import Herd
+import random
 
 class Battlefield:
     def __init__(self):
         self.fleet = Fleet()
         self.herd = Herd()
+        
 
     def run_game(self):
         pass
 
-    def display_wecome(self):
+    def display_welcome(self):
         print("Welcome to the ultimate battle!!")
         print("________________________________________")
         print("Here are our dinosaurs!")
-        dino_herd = Herd()
-        dino_herd.create_herd()
-        for dino in dino_herd.dinosaurs:
+        for dino in self.herd.dinosaurs:
             print(dino.name)
-        print("Here are out robots!")
-        robot_fleet = Fleet()
-        robot_fleet.create_fleet()
-        for robot in robot_fleet.robots:
+        print("________________________________________")
+        print("Here are our robots!")
+        for robot in self.fleet.robots:
             print(robot.name)
         
-        
-
+    # main battle between dino and robot turns  
     def battle(self):
-        pass
-
+        chosen_dino = self.herd.dinosaurs[0]
+        self.dino_turn(chosen_dino)
+    
+    # choose a dino with health >0, and attack robot
     def dino_turn(self, dinosaur):
-        pass
+        print("Dinos attack!")
+        chosen_robot = self.show_dino_opponent_options()
+        dinosaur.attack(chosen_robot)
 
     def robot_turn(self, robot):
-        pass
+        print("Robots attack!")
         
         #show dinos still with health
     def show_dino_opponent_options(self):
-        pass
-        
-        #show robos still with health
+        for robot in self.fleet.robots:
+            if robot.health > 0:
+                return robot.health
+            else:
+                print("All robots DEAD")
+
+         #show robos still with health
+    
     def show_robot_opponent_options(self):
         pass
 
