@@ -13,6 +13,4 @@ class Robot:
         else:
             print("All the robots crashed, can't attack")
 
-technoBot = Robot("technoBot")
-tntBot = Robot ("tntBot")
-tornadoBot = Robot("tornadoBot")
+

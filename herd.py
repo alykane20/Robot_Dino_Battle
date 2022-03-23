@@ -3,20 +3,19 @@ from dinosaur import Dinosaur
 class Herd:
     def __init__(self):
         self.dinosaurs = []
+        self.create_herd()
 
     def create_herd(self):
-        chompy = Dinosaur("chompy", 30)
-        speedy = Dinosaur("speedy", 10)
-        slashy = Dinosaur("slashy", 20)
-         
-        self.dinosaurs.append(chompy)
-        self.dinosaurs.append(speedy)
-        self.dinosaurs.append(slashy)
+
+        self.dinosaurs.append(Dinosaur("Chompy", 30))
+        self.dinosaurs.append(Dinosaur("Speedy", 10))
+        self.dinosaurs.append(Dinosaur("Slashy", 20))
        
 
-# team_dino = Herd()
-# team_dino.create_herd()
-# print(team_dino.dinosaurs)
+# dino_herd = Herd()
+# dino_herd.create_herd()
+# for dino in dino_herd.dinosaurs:
+#     print(dino.name)
 
 
 

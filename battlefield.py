@@ -9,7 +9,9 @@ class Battlefield:
         
 
     def run_game(self):
-        pass
+        self.display_welcome
+        self.battle
+        self.display_winners
 
     def display_welcome(self):
         print("Welcome to the ultimate battle!!")
@@ -26,6 +28,9 @@ class Battlefield:
     def battle(self):
         chosen_dino = self.herd.dinosaurs[0]
         self.dino_turn(chosen_dino)
+
+        chosen_robot = self.attack_with_robot()
+        self.robot_turn(chosen_robot)
     
     # choose a dino with health >0, and attack robot
     def dino_turn(self, dinosaur):
@@ -33,21 +38,30 @@ class Battlefield:
         chosen_robot = self.show_dino_opponent_options()
         dinosaur.attack(chosen_robot)
 
+   
+
     def robot_turn(self, robot):
         print("Robots attack!")
+        chosen_dino = self.show_robot_opponent_options
+        robot.attack(chosen_dino)
         
+
+            
         #show dinos still with health
     def show_dino_opponent_options(self):
         for robot in self.fleet.robots:
             if robot.health > 0:
-                return robot.health
+                return robot.name
             else:
-                print("All robots DEAD")
+                print("All robots - DEAD")
 
          #show robos still with health
-    
     def show_robot_opponent_options(self):
-        pass
+        for dino in self.herd.dinosaurs:
+            if dino.health > 0:
+                return dino.name
+            else:
+                print("All dinosaurs - DEAD")
 
     def display_winners(self):
         pass
